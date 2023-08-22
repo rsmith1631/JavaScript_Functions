@@ -100,7 +100,7 @@ function availableData(planLimit, day, usage){
     if (averageDailyGoal >= actualDailyRate){
         console.log(`You are using your data at a great rate! Your daily usage is ${actualDailyRate}.
         Your total usage is ${usage}. Make sure you do use more than ${bestContinuedRate} per day, this is your 
-        remaining daily rate max.`)
+        remaining daily rate.`)
     }
     else{
     console.log(`${day} days used, ${remainingDays} days remaining
