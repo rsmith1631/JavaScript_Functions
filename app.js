@@ -95,7 +95,7 @@ function availableData(planLimit, day, usage){
     let remainingDays = 30 - day;
     let averageDailyGoal = planLimit / 30;
     let actualDailyRate = usage / day;
-    let exceedDataOrNot = actualDailyRate * 30;
+    let exceedDataBy = (actualDailyRate * 30) - planLimit;
     let bestContinuedRate = (planLimit - usage) / day;
     if (averageDailyGoal >= actualDailyRate){
         console.log(`You are using your data at a great rate! Your daily usage is ${actualDailyRate}.
@@ -108,7 +108,7 @@ function availableData(planLimit, day, usage){
     You are EXCEEDING your average daily use (${actualDailyRate} GB/day),
     continuing this high usage, you'll exceed your
     data plan by 
-    ${exceedDataOrNot} GB.
+    ${exceedDataBy} GB.
     To stay below yoour data plan, use no more than
     ${bestContinuedRate} GB/day.`);}
 }
