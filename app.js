@@ -12,6 +12,10 @@ function printOdds(count) {
         }
     }
 }
+console.log("Odds to 10");
+printOdds(10);
+console.log("Odds to 100");
+printOdds(100);
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
 
@@ -28,7 +32,7 @@ function checkAge(userName, age){
 
 checkAge("Ben", 12);
 checkAge("Seth", 16);
-checkAge("Cameron, 21");
+checkAge("Cameron", 21);
 
 // Exercise 3 Section
 function quadrant(x, y){
@@ -74,7 +78,7 @@ function typeOfTriangle(a, b, c){
         if (a < b && a < c && b == c){
             console.log("isosceles");
         }
-        else if (a == b && a == c){
+        else if (a == b && b == c){
             console.log("equilateral");
         }
         else if (a != b && b != c && a != c){
@@ -102,7 +106,7 @@ function availableData(planLimit, day, usage){
         Your total usage is ${usage}. Make sure you do use more than ${bestContinuedRate} per day, this is your 
         remaining daily rate.`)
     }
-    else{
+    else if (averageDailyGoal < actualDailyRate) {
     console.log(`${day} days used, ${remainingDays} days remaining
     Average daily use: ${averageDailyGoal} GB/day.
     You are EXCEEDING your average daily use (${actualDailyRate} GB/day),
